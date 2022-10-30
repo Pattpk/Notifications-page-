@@ -1,0 +1,170 @@
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--Very-light-grayish-blue);
+}
+
+.container {
+  margin: 3.8rem;
+  width: 732px;
+  background-color: var(--White);
+  padding: 2.1rem 2rem;
+  border: 0.5rem;
+  border-radius: 12px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.notif_box {
+  padding: 0 0.05rem;
+  display: flex;
+  align-items: center;
+}
+
+#notifications {
+  background-color: var(--Blue);
+  margin-left: 0.75rem;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  color: var(--White);
+  font-weight: 500;
+  border-radius: 0.4rem;
+}
+
+.user_activity {
+  margin-top: 1.3px;
+  font-weight: 500;
+}
+
+.mark_all {
+  cursor: pointer;
+}
+
+.mark_all:hover {
+  color: var(--Blue);
+}
+
+.time {
+  padding: 0.2rem 0;
+  font-size: 16.5px;
+  color: var(--Grayish-blue);
+}
+
+p {
+  color: var(--Dark-grayish-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.notif_card {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  word-spacing: 2px;
+}
+
+img {
+  width: 48px;
+}
+.chess_img {
+  margin-left: auto;
+  border-radius: 0.5rem;
+}
+
+.chess_img:hover {
+  border: 3px solid var(--Light-grayish-blue-1);
+  cursor: pointer;
+}
+
+.description {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+strong,
+.link {
+  color: var(--Very-dark-blue);
+  cursor: pointer;
+}
+
+strong:hover,
+.link:hover {
+  color: var(--Blue);
+}
+
+.unread {
+  background-color: var(--Very-light-grayish-blue) !important;
+}
+
+.unread p:first-of-type::after {
+  content: "";
+  background-color: var(--Red);
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.message_card {
+  display: flex;
+  align-items: center;
+}
+.message {
+  margin-top: -0.85rem;
+  margin-bottom: 1.4rem;
+}
+
+.text {
+  width: 35.3rem;
+  height: 6rem;
+  padding: 1rem;
+  border: 1px solid var(--Light-grayish-blue-2);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 0 0 0 5.2rem;
+  overflow: hidden;
+}
+.text:hover {
+  background-color: var(--Light-grayish-blue-1);
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    margin: 0;
+  }
+}
